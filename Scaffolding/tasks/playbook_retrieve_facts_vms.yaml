@@ -1,0 +1,11 @@
+---
+- name: "Gather facts of all VMs"
+  openstack.cloud.server_info:
+    cloud: "{{ openstack_cloud }}"
+    name: "{{ vm_name_prefix }}-{{ item }}"
+  loop: "{{ range(1, num_vms + 1) }}"
+  register: vm_facts
+
+- name: "Display VM facts"
+  debug:
+    var: vm_facts

@@ -1,0 +1,11 @@
+---
+- name: "Copy Kafka tarball to the cloud VMs"
+  copy:
+    src: /tmp/kafka.tgz
+    dest: /tmp/kafka.tgz
+
+- name: "Extract Kafka on the cloud VMs"
+  unarchive:
+    src: /tmp/kafka.tgz
+    dest: /opt/
+    remote_src: yes
