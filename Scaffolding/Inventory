@@ -12,7 +12,7 @@
 # These are the aliases referenced in the master playbook
 
 [LocalMC]
-127.0.0.1  ansible_connection=local
+127.0.0.1  ansible_connection=local ansible_python_interpreter=/usr/bin/python3
 
 
 [CloudVMs]
@@ -34,8 +34,8 @@
 # @@
 ansible_user=cc
 ansible_connection=ssh
-ansible_ssh_private_key_file=<INSERT ABSOLUTE PATH TO YOUR TEAM's privatekey>
-ansible_ssh_common_args='-i <insert path to your F24_CS4287.pem> -o StrictHostKeyChecking=no -o ProxyCommand="ssh -W %h:%p cc@bastion"'
+ansible_ssh_private_key_file="\\wsl.localhost\Ubuntu\home\honoreallday\.ssh\team20key.pem"
+ansible_ssh_common_args='-i "\\wsl.localhost\Ubuntu\home\honoreallday\.ssh\F24_BASTION.pem" -o StrictHostKeyChecking=no -o ProxyCommand="ssh -W %h:%p cc@bastion"'
 
 
 

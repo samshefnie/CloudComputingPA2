@@ -12,14 +12,14 @@
 # I have already defined these two variables, which are used
 # in the master playbook.
 # @@ make sure to add the local user's username @@
-local_user: kendrick
+local_user: Honore
 
 cloud_user: cc  # user on chameleon VMs is cc
-cloud_name: "CH-822922"
+cloud_name: "chameleon"
 
 
 # SSH keypair to use for VM creation (must be pre-configured in Chameleon)
-ssh_key_name: "team20key"
+ssh_key_name: "Emman"
 
 # Image name to use for creating VMs
 image_name: "CC-Ubuntu22.04"

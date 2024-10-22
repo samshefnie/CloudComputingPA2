@@ -61,3 +61,10 @@
       - security_groups is defined
     fail_msg: "The 'security_groups' variable is not defined in variables.yaml."
     success_msg: "The 'security_groups' variable is defined."
+
+- name: "Check if num_vms is defined"
+  assert:
+    that:
+      - num_vms is defined
+    fail_msg: "The 'num_vms' variable is not defined in variables.yaml."
+    success_msg: "The 'num_vms' variable is defined."

@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://kvm.tacc.chameleoncloud.org/project/network_topology/
+HostUrl=https://kvm.tacc.chameleoncloud.org/project/api_access/openrc/
