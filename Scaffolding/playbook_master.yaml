@@ -65,6 +65,8 @@
   remote_user:  "{{ local_user }}"
 
   gather_facts: no
+  vars:
+    vm_name_prefix: "{{ vm_name_prefix }}"
   become: false
   collections:
   - ansible-base

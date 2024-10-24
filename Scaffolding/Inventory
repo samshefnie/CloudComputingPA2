@@ -15,13 +15,6 @@
 127.0.0.1  ansible_connection=local ansible_python_interpreter=/usr/bin/python3
 
 
-[CloudVMs]
-# @@ Your playbook that retrieves IP addresses of the VMs should
-#    insert the 4 private IP addresses one per line here.
-#    If you add manually, then you cannot run the master playbook
-#    in one go.
-# @@
-
 [CloudVMs:vars]
 # @@
 #    Insert the path to your team's pem file on the controller machine for
@@ -37,5 +30,13 @@ ansible_connection=ssh
 ansible_ssh_private_key_file="\\wsl.localhost\Ubuntu\home\honoreallday\.ssh\team20key.pem"
 ansible_ssh_common_args='-i "\\wsl.localhost\Ubuntu\home\honoreallday\.ssh\F24_BASTION.pem" -o StrictHostKeyChecking=no -o ProxyCommand="ssh -W %h:%p cc@bastion"'
 
-
-
+# @@ Your playbook that retrieves IP addresses of the VMs should
+#    insert the 4 private IP addresses one per line here.
+#    If you add manually, then you cannot run the master playbook
+#    in one go.
+# @@
+[CloudVMs]
+192.168.5.25
+192.168.5.92
+192.168.5.95
+192.168.5.4
